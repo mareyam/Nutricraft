@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Button, Heading, Text } from "@chakra-ui/react";
-import InputField from "@/components/InputField";
+import InputField from "@/components/input-field";
 import { FaUser } from "react-icons/fa";
 
 const Signup = () => {
