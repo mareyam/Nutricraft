@@ -9,125 +9,58 @@ Chart.register(CategoryScale);
 
 const SystemUptime = () => {
   const Data = [
-    {
-      id: 1,
-      year: 2016,
-      userGain: 80000,
-      userLost: 823,
-    },
-    {
-      id: 2,
-      year: 2017,
-      userGain: 45677,
-      userLost: 345,
-    },
-    {
-      id: 3,
-      year: 2017,
-      userGain: 45677,
-      userLost: 345,
-    },
-  ];
-  const Nutritionist = [
-    {
-      id: 1,
-      year: 2016,
-      userGain: 80000,
-      userLost: 823,
-    },
-    {
-      id: 2,
-      year: 2016,
-      userGain: 80000,
-      userLost: 823,
-    },
+    { id: 1, month: "Jan", result: 2500 },
+    { id: 2, month: "Feb", result: 3200 },
+    { id: 3, month: "Mar", result: 1800 },
+    { id: 4, month: "Apr", result: 4200 },
+    { id: 5, month: "May", result: 3800 },
+    { id: 6, month: "Jun", result: 2900 },
+    { id: 7, month: "Jul", result: 4700 },
+    { id: 8, month: "Aug", result: 1400 },
+    { id: 9, month: "Sep", result: 2700 },
+    { id: 10, month: "Oct", result: 4800 },
+    { id: 11, month: "Nov", result: 3900 },
+    { id: 12, month: "Dec", result: 5000 },
   ];
 
   const [chartData, setChartData] = useState({
-    labels: Data.map((data) => data.year),
+    labels: Data.map((data) => data.month),
     datasets: [
       {
-        label: "Users Gained ",
-        data: Data.map((data) => data.userGain),
+        label: "Daily logins",
+        data: Data.map((data) => data.result),
         backgroundColor: [
           "rgba(76, 115, 255, 1)",
           "rgba(158, 198, 0, 1)",
           "white",
+          "pink",
         ],
-        borderColor: "black",
-        borderWidth: 2,
-      },
-    ],
-  });
-  const [nutritionistData, setNutritionistData] = useState({
-    labels: Nutritionist.map((data) => data.year),
-    datasets: [
-      {
-        label: "Users Gained ",
-        data: Nutritionist.map((data) => data.userGain),
-        backgroundColor: ["rgba(76, 115, 255, 1)", "white"],
-        borderColor: "black",
-        borderWidth: 2,
+        borderColor: "gray",
+        borderWidth: 1,
       },
     ],
   });
 
   return (
     <HStack w="full" pos="relative">
-      <DoughnutChart chartData={chartData} />
-      <DoughnutChartNutritionist chartData={nutritionistData} />
+      <BarChart chartData={chartData} />
     </HStack>
   );
 };
 
 export default SystemUptime;
 
-function DoughnutChart({ chartData }: any) {
+function BarChart({ chartData }: any) {
   return (
-    <Box>
-      <Doughnut
-        data={chartData}
-        options={{
-          plugins: {
-            legend: {
-              display: false,
-            },
+    <Bar
+      data={chartData}
+      options={{
+        plugins: {
+          legend: {
+            display: false,
           },
-        }}
-      />
-    </Box>
-  );
-}
-
-function DoughnutChartNutritionist({ chartData }: any) {
-  return (
-    <Box boxSize="32">
-      <HStack>
-        <Doughnut
-          data={chartData}
-          options={{
-            plugins: {
-              legend: {
-                display: false,
-              },
-            },
-          }}
-        />
-        <Text
-          pos="absolute"
-          top="24"
-          right="12"
-          rounded="full"
-          p="8"
-          color="black"
-          fontWeight="800"
-        >
-          +18% <br />{" "}
-          <Text as="span" fontSize="12" color="gray.800" fontWeight="400">
-            Daily clients
-          </Text>
-        </Text>
-      </HStack>
-    </Box>
+        },
+      }}
+    />
   );
 }

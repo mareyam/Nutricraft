@@ -5,7 +5,7 @@ import MenuLink from "../navbar/MenuLink";
 
 const SideBar = () => {
   return (
-    <VStack  w="xs" alignItems="left">
+    <VStack w="xs" alignItems="left">
       <HStack>
         <IconButton
           aria-label="update social profile"

@@ -7,7 +7,7 @@ type MenuLinkProps = {
   title: string;
   fontSize: string;
   color: string;
-  icon?: ReactNode | null;
+  icon?: any | ReactNode | null;
 };
 
 const MenuLink = ({ href, title, fontSize, color, icon }: MenuLinkProps) => {

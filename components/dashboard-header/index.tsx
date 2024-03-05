@@ -17,12 +17,7 @@ import { IoMailOutline } from "react-icons/io5";
 import { IoIosNotificationsOutline } from "react-icons/io";
 const DashboardNavbar = () => {
   return (
-    <HStack
-      bg="rgba(95, 152, 237, 0.5)"
-      w="full"
-      p="4"
-      justifyContent="space-between"
-    >
+    <HStack w="full" p="4" justifyContent="space-between">
       <VStack textAlign="left" lineHeight="1">
         <Text w="full" fontWeight="700">
           Hi, Esha

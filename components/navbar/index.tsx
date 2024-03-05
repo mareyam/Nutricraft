@@ -1,19 +1,44 @@
+import ProfileAvatar from "@/common/ProfileAvatar";
 import MenuLink from "@/components/navbar/MenuLink";
-import { Box, HStack, Text } from "@chakra-ui/react";
+import MessageIcon from "@/icons/message-icon";
+import NotificationIcon from "@/icons/notification-icon";
+import {
+  Avatar,
+  Box,
+  HStack,
+  InputGroup,
+  Input,
+  InputLeftElement,
+  Text,
+  IconButton,
+} from "@chakra-ui/react";
 import React from "react";
+import { IoSearchOutline } from "react-icons/io5";
 
 const Navbar = () => {
   return (
-    <HStack
-      bg="rgba(95, 152, 237, 0.5)"
-      w="full"
-      p="4"
-      justifyContent="space-between"
-    >
-      <MenuLink color="white" title="NutriCraft" href="" fontSize="20" />
+    <HStack w="full" p="4" justifyContent="space-between">
+      <InputGroup>
+        <InputLeftElement>
+          <IconButton
+            rounded="full"
+            bg="transparent"
+            aria-label="search-icon"
+            icon={<IoSearchOutline size={20} />}
+          />
+        </InputLeftElement>
+        <Input
+          w="xs"
+          rounded="full"
+          fontSize="14"
+          placeholder="Search anything"
+          bg="white"
+        />
+      </InputGroup>
       <HStack>
-        <MenuLink color="white" title="Features" href="" fontSize="16" />
-        <MenuLink color="white" title="Blogs" href="" fontSize="16" />
+        <MessageIcon />
+        <NotificationIcon />
+        <ProfileAvatar />
       </HStack>
     </HStack>
   );
