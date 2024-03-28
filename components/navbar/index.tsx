@@ -14,10 +14,12 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
+import NavbarDrawer from "@/components/navbar-drawer";
 
 const Navbar = () => {
   return (
-    <HStack w="full" p="4" justifyContent="space-between">
+    <HStack justifyContent="space-between">
+      <NavbarDrawer />
       <InputGroup>
         <InputLeftElement>
           <IconButton

@@ -99,7 +99,7 @@ const ClientResult = () => {
   });
 
   return (
-    <HStack pos="relative" w="full" >
+    <HStack pos="relative" w="full">
       <DoughnutChart chartData={chartData} />
       <Text
         pos="absolute"

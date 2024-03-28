@@ -19,20 +19,23 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from "@chakra-ui/react";
+import useNavbarStore from "@/zustand-store/navbar";
 const NavbarDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
   return (
     <>
-      <Button border="2px solid red" colorScheme="teal" onClick={onOpen}>
-        Open
-      </Button>
+      <IconButton
+        icon={<RxHamburgerMenu size={20} />}
+        aria-label="hamburger-opened"
+        rounded="full"
+        onClick={onOpen}
+      />
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerBody overflow="scroll" className="hide-scroll">
-            <VStack w="xs">
+        <DrawerContent overflow="auto" className="hide-scroll">
+          <DrawerBody w="xs" px="none">
+            <VStack w="full">
               <HStack justifyContent="space-between" w="full">
                 <HStack>
                   <IconButton

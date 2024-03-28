@@ -41,91 +41,91 @@ export const Home = [
 
 export const Apps = [
   {
-    title: "Misc",
+    title: "BMisc",
     icon: <FaTools size={20} />,
   },
   {
-    title: "Crypto",
+    title: "BCrypto",
     icon: <FaCoins size={20} />,
   },
   {
-    title: "Listing",
+    title: "BListing",
     icon: <FaList size={20} />,
   },
   {
-    title: "CRM",
+    title: "BCRM",
     icon: <FaChartBar size={20} />,
   },
   {
-    title: "Intranet",
+    title: "BIntranet",
     icon: <FaGlobe size={20} />,
   },
   {
-    title: "eCommerce",
+    title: "BeCommerce",
     icon: <FaShoppingCart size={20} />,
   },
   {
-    title: "News",
+    title: "BNews",
     icon: <FaNewspaper size={20} />,
   },
 ];
 export const Cards = [
   {
-    title: "Misc",
+    title: "CMisc",
     icon: <FaTools size={20} />,
   },
   {
-    title: "Crypto",
+    title: "CCrypto",
     icon: <FaCoins size={20} />,
   },
   {
-    title: "Listing",
+    title: "CListing",
     icon: <FaList size={20} />,
   },
   {
-    title: "CRM",
+    title: "CCRM",
     icon: <FaChartBar size={20} />,
   },
   {
-    title: "Intranet",
+    title: "CIntranet",
     icon: <FaGlobe size={20} />,
   },
   {
-    title: "eCommerce",
+    title: "CeCommerce",
     icon: <FaShoppingCart size={20} />,
   },
   {
-    title: "News",
+    title: "CNews",
     icon: <FaNewspaper size={20} />,
   },
 ];
 export const Components = [
   {
-    title: "Misc",
+    title: "DMisc",
     icon: <FaTools size={20} />,
   },
   {
-    title: "Crypto",
+    title: "DCrypto",
     icon: <FaCoins size={20} />,
   },
   {
-    title: "Listing",
+    title: "DListing",
     icon: <FaList size={20} />,
   },
   {
-    title: "CRM",
+    title: "DCRM",
     icon: <FaChartBar size={20} />,
   },
   {
-    title: "Intranet",
+    title: "DIntranet",
     icon: <FaGlobe size={20} />,
   },
   {
-    title: "eCommerce",
+    title: "DeCommerce",
     icon: <FaShoppingCart size={20} />,
   },
   {
-    title: "News",
+    title: "DNews",
     icon: <FaNewspaper size={20} />,
   },
 ];
