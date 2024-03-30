@@ -8,7 +8,7 @@ const HorizontalLine = ({
   color: string;
   width: string | Record<string, string>;
 }) => {
-  return <Box border="2px solid red" w={width} h="0.5" bg={color}></Box>;
+  return <Box w={width} h="0.5" bg={color}></Box>;
 };
 
 export default HorizontalLine;
