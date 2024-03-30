@@ -30,20 +30,28 @@ const Recipes = () => {
   const filterRecipes = (cuisine: string) => {
     const dishes = recipes.filter((recipe: any) => recipe.cuisine === cuisine);
     setFilteredDishes(dishes);
-    console.log(filtredDishes);
   };
 
   if (isLoading) {
     return (
-      <Flex justify="center" align="center" h="100vh">
-        <CircularProgress isIndeterminate color="purple.500" />
-      </Flex>
+      <Card w="6xl" h="xl">
+        <CardBody textAlign="center">
+          <Text>Loading...</Text>
+        </CardBody>
+      </Card>
     );
   }
 
   if (isError) {
-    return <div>Error fetching data</div>;
+    return (
+      <Card w="6xl" h="xl">
+        <CardBody textAlign="center">
+          <Text>Error fetching data</Text>
+        </CardBody>
+      </Card>
+    );
   }
+
   return (
     <>
       <Card
