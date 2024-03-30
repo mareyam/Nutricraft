@@ -46,7 +46,7 @@ const PopularAgents = () => {
               lineHeight="1"
             >
               <Text fontWeight="500" fontSize="14" key={id}>
-                {firstName}
+                {firstName} &nbsp;
                 {lastName}
               </Text>
               <HStack>

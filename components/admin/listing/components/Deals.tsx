@@ -22,31 +22,7 @@ const AllDeals = () => {
   return (
     <SimpleGrid columns={[1, 2, 2]} py="6" gap="40px" w="full">
       <CurrentDeal />
-      <Card borderRadius="xl" boxShadow="0px 8px 10px -5px rgba(0,0,0,0.5)">
-        <CardHeader>
-          <Text fontSize="24" fontWeight="600">
-            927 Deals Closed
-          </Text>
-          <HStack w="full" justifyContent="space-between">
-            <Text fontSize="18" color="gray.600" fontWeight="600">
-              This year
-            </Text>
-            <HStack>
-              <Box w="2" h="2" bg="blue.200" rounded="full" />
-              <Text fontSize="18" fontWeight="500" color="gray.600">
-                Queries
-              </Text>
-              <Box w="2" h="2" bg="red.400" rounded="full" />
-              <Text fontSize="18" fontWeight="500" color="gray.600">
-                Closed Deals
-              </Text>
-            </HStack>
-          </HStack>
-        </CardHeader>
-        <CardBody overflow="hidden">
-          <DealsClosedChart />
-        </CardBody>
-      </Card>
+      <ClosedDealsCard />
     </SimpleGrid>
   );
 };
@@ -104,5 +80,35 @@ const CurrentDeal = () => {
         </VStack>
       </SimpleGrid>
     </VStack>
+  );
+};
+
+const ClosedDealsCard = () => {
+  return (
+    <Card borderRadius="xl" boxShadow="0px 8px 10px -5px rgba(0,0,0,0.5)">
+      <CardHeader>
+        <Text fontSize="24" fontWeight="600">
+          927 Deals Closed
+        </Text>
+        <HStack w="full" justifyContent="space-between">
+          <Text fontSize="18" color="gray.600" fontWeight="600">
+            This year
+          </Text>
+          <HStack>
+            <Box w="2" h="2" bg="blue.200" rounded="full" />
+            <Text fontSize="18" fontWeight="500" color="gray.600">
+              Queries
+            </Text>
+            <Box w="2" h="2" bg="red.400" rounded="full" />
+            <Text fontSize="18" fontWeight="500" color="gray.600">
+              Closed Deals
+            </Text>
+          </HStack>
+        </HStack>
+      </CardHeader>
+      <CardBody overflow="hidden">
+        <DealsClosedChart />
+      </CardBody>
+    </Card>
   );
 };
