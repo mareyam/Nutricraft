@@ -26,7 +26,6 @@ export default IconButton;
 //       mr="-4"
 //       rounded="full"
 //       bg="transparent"
-//       border={"2px solid red"}
 //     />
 //   );
 // };

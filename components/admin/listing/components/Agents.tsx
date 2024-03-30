@@ -6,6 +6,8 @@ import {
   Text,
   VStack,
   HStack,
+  Flex,
+  CircularProgress,
 } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { useAgents } from "@/hooks/agents";
@@ -13,6 +15,17 @@ import { useAgents } from "@/hooks/agents";
 const PopularAgents = () => {
   const { data, isLoading, isError } = useQuery("agents", useAgents);
 
+  if (isLoading) {
+    return (
+      <Flex justify="center" align="center" h="100vh">
+        <CircularProgress isIndeterminate color="purple.500" />
+      </Flex>
+    );
+  }
+
+  if (isError) {
+    return <div>Error fetching data</div>;
+  }
   return (
     <>
       <Text py="4" textAlign="left" w="full">

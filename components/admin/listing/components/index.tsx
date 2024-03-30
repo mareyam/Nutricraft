@@ -1,9 +1,10 @@
 import React from "react";
-import { VStack } from "@chakra-ui/react";
+import { Flex, SimpleGrid, VStack } from "@chakra-ui/react";
 import ResultCards from "./ResultCards";
 import PopularAgents from "./Agents";
 import AllDeals from "./Deals";
-import RecipeCard from "./RecipeCard";
+import Recipes from "./Recipes";
+import RecentActivities from "./RecentActivities";
 
 const Listing = () => {
   return (
@@ -11,7 +12,10 @@ const Listing = () => {
       <ResultCards />
       <PopularAgents />
       <AllDeals />
-      <RecipeCard />
+      <Flex gap="10px" w="full" justifyContent="space-between">
+        <Recipes />
+        <RecentActivities />
+      </Flex>
     </VStack>
   );
 };
