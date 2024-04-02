@@ -12,19 +12,24 @@
   }
   ```
 */
+import React from "react";
+
 export default function Example() {
   return (
-    <ul className="w-56 max-h-sm border border-black space-y-4 p-4">
+    <ul className="max-w-sm max-h-sm p-4 border-2 border-purple">
       {people.map((item: any, index: number) => (
         <div
           key={index}
-          className="flex w-full justify-between hover:bg-purple rounded-lg text-white px-0"
+          className="flex w-full p-4 justify-between hover:bg-metal px-4 rounded-lg text-white"
         >
-          <div className="rounded-full border border-purple  size-8" />
-          <div className="block">
-            <p className="text-metal font-medium text-sm">{item.name}</p>
-            <p className="text-metal font-thin text-sm">{item.phone}</p>
+          <div className="flex">
+            <div className="rounded-full border border-purple  size-10" />
+            <div className="block ">
+              <p className="text-metal font-medium text-sm">{item.name}</p>
+              <p className="text-metal font-thin text-sm">{item.phone}</p>
+            </div>
           </div>
+          <p className="text-white hidden hover:block">Call</p>
         </div>
       ))}
     </ul>
