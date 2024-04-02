@@ -4,6 +4,7 @@ import React from "react";
 const HorizontalLine = ({
   color,
   width,
+  
 }: {
   color: string;
   width: string | Record<string, string>;

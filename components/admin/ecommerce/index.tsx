@@ -1,7 +1,16 @@
 import React from "react";
+import SalesStats from "./SalesStats";
+import SalesReport from "./SalesReport";
+import YearlyProfit from "./YearlyProfit";
 
-const index = () => {
-  return <div>index</div>;
+const Ecommerce = () => {
+  return (
+    <>
+      <SalesStats />
+      <SalesReport />
+      <YearlyProfit />
+    </>
+  );
 };
 
-export default index;
+export default Ecommerce;
