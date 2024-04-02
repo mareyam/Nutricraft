@@ -126,15 +126,22 @@ const ResultCard = ({
         fontWeight="500"
         fontSize="10"
         textTransform="uppercase"
-        letterSpacing="1px"
+        letterSpacing="1.5px"
+        fontFamily="roboto"
       >
         {title}
       </Text>
       <VStack pt="4" lineHeight="1" w="full" alignItems="left">
-        <Text fontSize="20" fontWeight="600" color="white">
+        <Text fontFamily="roboto" fontSize="20" fontWeight="600" color="white">
           {addCommasToNumberString(amount)}
         </Text>
-        <Text zIndex="1" fontSize="12" fontWeight="500" color="white">
+        <Text
+          fontFamily="roboto"
+          zIndex="1"
+          fontSize="12"
+          fontWeight="500"
+          color="white"
+        >
           0{change}% This Week
         </Text>
       </VStack>

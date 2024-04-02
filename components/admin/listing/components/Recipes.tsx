@@ -27,8 +27,13 @@ const Recipes = () => {
   );
   const uniqueCuisinesArray = Array.from(uniqueCuisinesSet);
 
-  const filterRecipes = (cuisine: string) => {
-    const dishes = recipes.filter((recipe: any) => recipe.cuisine === cuisine);
+  const filterRecipes = (cuisine?: string) => {
+    let dishes;
+    if (cuisine) {
+      dishes = recipes.filter((recipe: any) => recipe.cuisine === cuisine);
+    } else {
+      dishes = recipes;
+    }
     setFilteredDishes(dishes);
   };
 

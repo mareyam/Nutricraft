@@ -8,9 +8,12 @@ import {
   HStack,
   Flex,
   CircularProgress,
+  Divider,
+  IconButton,
 } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { useAgents } from "@/hooks/agents";
+import { MdOutlineStarPurple500 } from "react-icons/md";
 
 const PopularAgents = () => {
   const { data, isLoading, isError } = useQuery("agents", useAgents);
@@ -28,7 +31,7 @@ const PopularAgents = () => {
   }
   return (
     <>
-      <Text py="4" textAlign="left" w="full">
+      <Text py="4" textAlign="left" w="full" color="black" fontWeight="500">
         Popular Agents
       </Text>
       <SimpleGrid columns={[2, null, 4]} spacing="40px" pos="relative" w="full">
@@ -45,16 +48,23 @@ const PopularAgents = () => {
               pt="12"
               lineHeight="1"
             >
-              <Text fontWeight="500" fontSize="14" key={id}>
+              <Text fontWeight="500" fontSize="13" key={id}>
                 {firstName} &nbsp;
                 {lastName}
               </Text>
               <HStack>
-                <Text fontWeight="400" fontSize="12">
+                <IconButton
+                  color="yellow.500"
+                  mr="-6" pt='-1'
+                  aria-label="rating-star"
+                  variant="unstyled"
+                  icon={<MdOutlineStarPurple500 size={18} />}
+                />
+                <Text color="#8595A6" fontWeight="500" fontSize="10">
                   4.3
                 </Text>
-                <Box w="0.5" h="4" bg="gray.200"></Box>
-                <Text fontWeight="400" fontSize="12">
+                <Divider orientation="vertical" h="4" />
+                <Text color="#8595A6" fontWeight="500" fontSize="10">
                   23 deals
                 </Text>
               </HStack>
