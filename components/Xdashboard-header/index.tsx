@@ -11,7 +11,6 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { CiSearch } from "react-icons/ci";
 import { TbVector } from "react-icons/tb";
 import { IoMailOutline } from "react-icons/io5";
 import { IoIosNotificationsOutline } from "react-icons/io";
@@ -28,9 +27,7 @@ const DashboardNavbar = () => {
       <HStack>
         <HStack spacing="0">
           <InputGroup w="xs">
-            <InputLeftElement>
-              <CiSearch />
-            </InputLeftElement>
+            <InputLeftElement>{/* <CiSearch /> */}</InputLeftElement>
             <Input bg="rgba(250, 250, 250, 1)" placeholder="Search..."></Input>
             <InputRightElement>
               <TbVector />

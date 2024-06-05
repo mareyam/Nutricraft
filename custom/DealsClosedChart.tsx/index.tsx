@@ -26,13 +26,13 @@ const DealsClosedChart = () => {
               w="2"
               zIndex="0"
               h={`${item.deals / 100}`}
-              bg="blue.200"
+              bg="blue.400"
             />
             <Box
               key={index}
               w="2"
               h={`${item.queries / 10}`}
-              bg="red.300"
+              bg="red.500"
               zIndex="0"
             />
             <Box
