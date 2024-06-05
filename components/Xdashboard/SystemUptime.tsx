@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Bar } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 import { HStack } from "@chakra-ui/react";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
@@ -50,7 +50,7 @@ export default SystemUptime;
 
 function BarChart({ chartData }: any) {
   return (
-    <Bar
+    <Line
       data={chartData}
       options={{
         plugins: {

@@ -1,11 +1,10 @@
 import SystemUptime from "@/components/Xdashboard/SystemUptime";
 import React from "react";
+import MonthlyOrdersChart from "@/common/charts/MonthlyOrdersChart";
+import AverageOrder from "@/common/charts/AverageOrder";
 
 const SalesStats = () => {
   return (
-    // <>
-    //   <SystemUptime />
-    // </>
     <div
       className="w-full
       shadow-xl rounded-xl overflow-hidden"
@@ -41,11 +40,13 @@ const SalesStats = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white h-20 grid grid-cols-2 gap-4">
+      <div className="bg-white h-full grid grid-cols-2 gap-4">
         <div className="bg-blue-500">
-          <SystemUptime />
+          <MonthlyOrdersChart />
         </div>
-        <div className="bg-green-500">chart1</div>
+        <div className="bg-green-500">
+          <AverageOrder />
+        </div>
       </div>
     </div>
   );
