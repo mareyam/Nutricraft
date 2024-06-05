@@ -1,4 +1,3 @@
-import SystemUptime from "@/components/Xdashboard/SystemUptime";
 import React from "react";
 import MonthlyOrdersChart from "@/common/charts/MonthlyOrdersChart";
 import AverageOrder from "@/common/charts/AverageOrder";

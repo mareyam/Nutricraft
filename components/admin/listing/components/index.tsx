@@ -5,7 +5,6 @@ import PopularAgents from "./Agents";
 import AllDeals from "./Deals";
 import Recipes from "./Recipes";
 import RecentActivities from "./RecentActivities";
-import SystemUptime from "@/components/Xdashboard/SystemUptime";
 
 const Listing = () => {
   return (
